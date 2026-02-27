@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABC Fitness Studio — About Us</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-logo">
+      <img src="images/logo.png" alt="ABC Fitness Studio Logo" />
+      <span>ABC Fitness Studio</span>
+    </div>
+    <div class="header-icons">
+      <a href="#" title="Search">&#128269;</a>
+      <a href="gallery.html" title="Shopping Cart">&#128722; <span class="cart-badge">(0 items)</span></a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="community.html">Community Hub</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-title-bar">
+    <h1>About ABC Fitness Studio</h1>
+    <p>Our mission, our values, and our story</p>
+  </div>
+
+  <main>
+
+    <section style="margin-bottom: 48px;">
+      <div class="about-hero">
+        <img src="images/Client2_IndividualPilates.png" alt="Inside ABC Fitness Studio" />
+        <div class="about-hero-text">
+          <h2>Who We Are</h2>
+          <p>ABC Fitness Studio was founded on the belief that fitness should be accessible to everyone, regardless of age, background, or experience level. Since opening our doors, we have built a welcoming community of members who support and inspire each other every single day.</p>
+          <p>Our certified instructors bring years of experience across yoga, strength training, cardio, and personal coaching. We are proud to offer a wide variety of classes and services designed to meet you exactly where you are.</p>
+          <p>At ABC Fitness Studio, we do not just build stronger bodies — we build stronger communities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 48px;">
+      <h2 class="section-title">Our Core Values</h2>
+      <p class="section-subtitle">Everything we do is guided by these three principles.</p>
+      <div class="highlights">
+        <div class="highlight-item">
+          <div class="icon">❤️</div>
+          <h3>Health</h3>
+          <p>We prioritize the physical and mental well-being of every member. Your health is always our number one concern.</p>
+        </div>
+        <div class="highlight-item">
+          <div class="icon">🤝</div>
+          <h3>Community</h3>
+          <p>We believe in the power of community to motivate, support, and celebrate every milestone, big or small.</p>
+        </div>
+        <div class="highlight-item">
+          <div class="icon">🌟</div>
+          <h3>Inclusivity</h3>
+          <p>Every body is a fitness body. We welcome people of all sizes, ages, and abilities with open arms and zero judgment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 48px;">
+      <h2 class="section-title">Hours of Operation</h2>
+      <p class="section-subtitle">We are open most days to fit around your schedule.</p>
+      <div class="two-col">
+        <div class="info-box">
+          <h3>Studio Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>6:00 AM – 9:00 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM – 6:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+            <tr><td>Holidays</td><td>Hours may vary</td></tr>
+          </table>
+          <p style="margin-top:14px; font-size:14px; color:#555;">📞 (214) 555-0199 &nbsp;|&nbsp; info@abcfitness.com</p>
+        </div>
+        <img src="images/Client2_IndividualPilates.png" alt="ABC Fitness Studio location map" style="height:260px;" />
+      </div>
+    </section>
+
+    <!-- CONTACT FORM with JS validation + localStorage -->
+    <section id="contact">
+      <div class="form-section">
+        <h2>Contact Us &amp; Custom Orders</h2>
+        <p>Have a question, feedback, or interested in a custom order? Fill out the form below and our team will respond within 24 hours.</p>
+        <form id="contact-form" action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="full-name">Full Name *</label>
+              <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="(XXX) XXX-XXXX" />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select a subject</option>
+              <option value="feedback">Feedback</option>
+              <option value="custom-order">Custom Order Request</option>
+              <option value="general">General Inquiry</option>
+              <option value="membership">Membership Information</option>
+              <option value="classes">Class Schedule</option>
+              <option value="personal-training">Personal Training</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message / Order Details *</label>
+            <textarea id="message" name="message" placeholder="Describe your inquiry or custom order request in detail." required style="height:160px;"></textarea>
+          </div>
+          <div style="text-align: center; margin-top: 12px;">
+            <button type="submit" class="btn-submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- CUSTOMER FEEDBACK FEATURE -->
+    <section style="margin-top: 40px;">
+      <div class="form-section">
+        <h2>Leave a Review</h2>
+        <p>We value your feedback! Share your experience with ABC Fitness Studio.</p>
+        <div class="form-group">
+          <label>Your Rating *</label>
+          <div style="display:flex; gap:16px; margin-top:8px; font-size:20px;">
+            <label><input type="radio" name="rating" value="5" /> ⭐⭐⭐⭐⭐</label>
+            <label><input type="radio" name="rating" value="4" /> ⭐⭐⭐⭐</label>
+            <label><input type="radio" name="rating" value="3" /> ⭐⭐⭐</label>
+            <label><input type="radio" name="rating" value="2" /> ⭐⭐</label>
+            <label><input type="radio" name="rating" value="1" /> ⭐</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="feedback-comment">Your Feedback *</label>
+          <textarea id="feedback-comment" placeholder="Tell us about your experience at ABC Fitness Studio..." style="height:120px;"></textarea>
+        </div>
+        <div style="text-align:center;">
+          <button id="feedback-submit" class="btn-submit">Submit Feedback</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>ABC Fitness Studio</h4>
+        <p>Your community-centered fitness destination. Building stronger bodies and stronger communities since 2015.</p>
+        <div class="footer-social">
+          <a href="#" title="Facebook">📘</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="Twitter">🐦</a>
+          <a href="#" title="YouTube">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About Us</a>
+        <a href="community.html">Community Hub</a>
+        <a href="about.html#contact">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Connected</h4>
+        <p>Subscribe to our newsletter for events, tips, and exclusive member offers.</p>
+        <div class="footer-newsletter">
+          <input type="email" id="subscribe-email" placeholder="Enter your email" />
+          <button type="button" id="subscribe-btn">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>123 Fitness Lane, Dallas, TX 75201 &nbsp;|&nbsp; (214) 555-0199 &nbsp;|&nbsp; info@abcfitness.com</p>
+      <p style="margin-top:6px;">&copy; 2025 ABC Fitness Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

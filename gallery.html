@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABC Fitness Studio — Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-logo">
+      <img src="images/logo.png" alt="ABC Fitness Studio Logo" />
+      <span>ABC Fitness Studio</span>
+    </div>
+    <div class="header-icons">
+      <a href="#" title="Search">&#128269;</a>
+      <a href="#" title="Shopping Cart" onclick="viewCart(); return false;">&#128722; <span class="cart-badge">(0 items)</span></a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="community.html">Community Hub</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-title-bar" style="display:flex; justify-content:space-between; align-items:center; padding:20px 40px; text-align:left;">
+    <div>
+      <h1>Our Classes &amp; Products</h1>
+      <p>Browse and add items to your cart</p>
+    </div>
+    <button class="btn-primary view-cart-btn">&#128722; View Shopping Cart <span class="cart-badge">(0 items)</span></button>
+  </div>
+
+  <div style="background-color:#f0f4ff; border-bottom:1px solid #D3D3D3; padding:12px 40px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+    <button class="category-tab active">All</button>
+    <button class="category-tab">Classes</button>
+    <button class="category-tab">Products</button>
+    <button class="category-tab">Memberships</button>
+    <div style="margin-left:auto; display:flex; align-items:center; gap:8px;">
+      <label for="sort" style="font-size:14px; color:#001F3F; font-weight:bold; margin:0;">Sort by:</label>
+      <select id="sort" style="padding:7px 12px; border:1px solid #D3D3D3; border-radius:4px; font-size:14px; color:#00231C;">
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        <option>Newest</option>
+      </select>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <div class="gallery-table-wrap">
+        <table class="gallery-table">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Item Name</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="images/Client2_IndividualYoga.png" alt="Individual Yoga Session" /></td>
+              <td><strong>Individual Yoga Session</strong></td>
+              <td>A private one-on-one yoga session with a certified instructor. Tailored to your skill level and personal goals. 60 minutes.</td>
+              <td class="price-col">$25.00</td>
+              <td><button class="btn-cart" style="width:auto; padding:9px 16px;">Add to Cart</button></td>
+            </tr>
+            <tr>
+              <td><img src="images/Client2_GroupYoga.png" alt="Group Fitness Class" /></td>
+              <td><strong>Group Fitness Class</strong></td>
+              <td>High-energy instructor-led group fitness session. Great for all levels. Includes warm-up, workout, and cool-down. 45 minutes.</td>
+              <td class="price-col">$15.00</td>
+              <td><button class="btn-cart" style="width:auto; padding:9px 16px;">Add to Cart</button></td>
+            </tr>
+            <tr>
+              <td><img src="images/Client2_IndividualKickboxing.png" alt="Personal Training Session" /></td>
+              <td><strong>Personal Training Session</strong></td>
+              <td>Work one-on-one with a certified personal trainer. Customized fitness plan designed specifically for your goals. 60 minutes.</td>
+              <td class="price-col">$75.00</td>
+              <td><button class="btn-cart" style="width:auto; padding:9px 16px;">Add to Cart</button></td>
+            </tr>
+            <tr>
+              <td><img src="images/Client2_YogaMat.png" alt="Yoga Mat" /></td>
+              <td><strong>Yoga Mat</strong></td>
+              <td>Premium non-slip, eco-friendly yoga mat. Extra thick for joint support. Perfect for yoga, pilates, and floor exercises.</td>
+              <td class="price-col">$45.00</td>
+              <td><button class="btn-cart" style="width:auto; padding:9px 16px;">Add to Cart</button></td>
+            </tr>
+            <tr>
+              <td><img src="images/Client2_WaterBottle.png" alt="Water Bottle" /></td>
+              <td><strong>Water Bottle</strong></td>
+              <td>ABC Fitness Studio branded insulated stainless steel water bottle. Keeps drinks cold for 24 hours. 32oz capacity.</td>
+              <td class="price-col">$20.00</td>
+              <td><button class="btn-cart" style="width:auto; padding:9px 16px;">Add to Cart</button></td>
+            </tr>
+            <tr>
+              <td><img src="images/Client2_TeeShirt.png" alt="Studio T-Shirt" /></td>
+              <td><strong>Studio T-Shirt</strong></td>
+              <td>Lightweight, moisture-wicking performance tee with the ABC Fitness Studio logo. Available in sizes XS through 3XL.</td>
+              <td class="price-col">$30.00</td>
+              <td><button class="btn-cart" style="width:auto; padding:9px 16px;">Add to Cart</button></td>
+            </tr>
+            <tr>
+              <td><img src="images/Client2_GroupPilates.png" alt="Monthly Membership" /></td>
+              <td><strong>Monthly Membership</strong></td>
+              <td>Unlimited access to all group classes, member-only events, and 20% off all products. Cancel anytime.</td>
+              <td class="price-col">$50.00/mo</td>
+              <td><button class="btn-cart" style="width:auto; padding:9px 16px;">Add to Cart</button></td>
+            </tr>
+            <tr>
+              <td><img src="images/Client2_GroupKickboxing.png" alt="Studio Towel" /></td>
+              <td><strong>Studio Towel</strong></td>
+              <td>Quick-dry microfiber towel with ABC Fitness Studio branding. Perfect for workouts. Lightweight and compact.</td>
+              <td class="price-col">$12.00</td>
+              <td><button class="btn-cart" style="width:auto; padding:9px 16px;">Add to Cart</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="promo-banner">
+      <div>
+        <h2>Become a Member &amp; Save</h2>
+        <p>Members receive 20% off all classes and products, plus exclusive access to member-only events and early registration.</p>
+      </div>
+      <a href="about.html#contact" class="btn-primary">Get Membership Info</a>
+    </div>
+  </main>
+
+  <!-- SHOPPING CART MODAL -->
+  <div id="cart-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:10000; justify-content:center; align-items:center;">
+    <div style="background:#fff; border-radius:8px; padding:32px; max-width:650px; width:90%; max-height:80vh; overflow-y:auto; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+        <h2 style="color:#001F3F; font-size:22px;">&#128722; Shopping Cart</h2>
+        <span onclick="closeCart()" style="cursor:pointer; font-size:22px; color:#666;">&#10005;</span>
+      </div>
+      <table style="width:100%; border-collapse:collapse;">
+        <thead>
+          <tr style="background:#001F3F; color:#fff;">
+            <th style="padding:10px 14px; text-align:left;">Item</th>
+            <th style="padding:10px 14px; text-align:left;">Price</th>
+            <th style="padding:10px 14px; text-align:left;">Qty</th>
+            <th style="padding:10px 14px; text-align:left;">Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="cart-body"></tbody>
+      </table>
+      <div style="text-align:right; margin-top:16px; font-size:18px; font-weight:bold; color:#001F3F;">
+        Total: <span id="cart-total">$0.00</span>
+      </div>
+      <div style="display:flex; gap:12px; margin-top:20px; justify-content:flex-end;">
+        <button onclick="clearCart()" style="padding:10px 22px; background:#D3D3D3; color:#001F3F; border:none; border-radius:4px; font-weight:bold; cursor:pointer; font-size:14px;">Clear Cart</button>
+        <button onclick="processOrder()" class="btn-primary" style="padding:10px 22px; font-size:14px;">Process Order</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>ABC Fitness Studio</h4>
+        <p>Your community-centered fitness destination. Building stronger bodies and stronger communities since 2015.</p>
+        <div class="footer-social">
+          <a href="#" title="Facebook">📘</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="Twitter">🐦</a>
+          <a href="#" title="YouTube">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About Us</a>
+        <a href="community.html">Community Hub</a>
+        <a href="about.html#contact">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Connected</h4>
+        <p>Subscribe to our newsletter for events, tips, and exclusive member offers.</p>
+        <div class="footer-newsletter">
+          <input type="email" id="subscribe-email" placeholder="Enter your email" />
+          <button type="button" id="subscribe-btn">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>123 Fitness Lane, Dallas, TX 75201 &nbsp;|&nbsp; (214) 555-0199 &nbsp;|&nbsp; info@abcfitness.com</p>
+      <p style="margin-top:6px;">&copy; 2025 ABC Fitness Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
